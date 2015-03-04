@@ -12,8 +12,8 @@ redlayer = image(:,:,1);
 greenlayer = image(:,:,2);
 bluelayer = image(:,:,3);
 
-redlayer(:,1:(c/2)) = redlayer(:,1:(c/2))+redval;
-greenlayer(:,(c/2+1):c) = greenlayerlayer(:,(c/2+1):c)+greenval;
+redlayer(:,[1:(c/2)]) = redlayer(:,[1:(c/2)])+redval;
+greenlayer(:,(c/2+1):c) = greenlayer(:,(c/2+1):c)+greenval;
 bluemask = bluelayer > 150
 
 bluelayer(bluemask) = bluelayer(bluemask)-blueval
